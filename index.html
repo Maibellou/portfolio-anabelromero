@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ani Romero - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#111111',
+                        'dark-card': '#1a1a1a',
+                        'dark-text': '#e2e8f0',
+                        'accent-green': '#10b981',
+                        'accent-green-dark': '#059669'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-dark-bg text-dark-text min-h-screen">
+    <!-- Header y Navegación -->
+    <header class="fixed top-0 w-full bg-dark-card/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo/Nombre -->
+                <a href="#" class="text-2xl font-bold text-accent-green">Ani Romero</a>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="hover:text-accent-green transition-colors">Inicio</a>
+                    <a href="#portfolio" class="hover:text-accent-green transition-colors">Portfolio</a>
+                    <a href="#contacto" class="hover:text-accent-green transition-colors">Contacto</a>
+                    <a href="https://www.linkedin.com/in/anabelromero-ar/" target="_blank" class="text-accent-green hover:text-accent-green-dark transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+                
+                <!-- Botón Hamburguesa Mobile -->
+                <button id="menu-toggle" class="md:hidden text-dark-text hover:text-accent-green transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menú Mobile Pantalla Completa -->
+    <div id="mobile-menu" class="fixed inset-0 bg-dark-bg z-50 hidden flex-col items-center justify-center space-y-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-2xl text-dark-text hover:text-accent-green transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#inicio" class="text-3xl font-semibold hover:text-accent-green transition-colors">Inicio</a>
+        <a href="#portfolio" class="text-3xl font-semibold hover:text-accent-green transition-colors">Portfolio</a>
+        <a href="#contacto" class="text-3xl font-semibold hover:text-accent-green transition-colors">Contacto</a>
+        <a href="https://www.linkedin.com/in/anabelromero-ar/" target="_blank" class="text-3xl text-accent-green hover:text-accent-green-dark transition-colors">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-24 pb-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Título lado izquierdo -->
+                <div class="text-left animate-slide-in-left">
+                    <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 bg-gradient-to-r from-accent-green to-accent-green-dark bg-clip-text text-transparent relative inline-block">
+                        Ani Romero
+                        <span class="absolute bottom-0 left-0 w-0 h-1 bg-accent-green animate-underline"></span>
+                    </h1>
+                </div>
+                
+                <!-- Bio lado derecho -->
+                <div class="animate-slide-in-right">
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-300 font-body font-light">
+                        Soy estudiante avanzada de la Facultad de Arquitectura y Urbanismo de la Universidad Nacional de La Plata, ubicada en Buenos Aires, Argentina. Paralelamente a mis actividades académicas, realizo trabajos independientes, creando planos técnicos y municipales para diversos estudios y arquitectos.
+                    </p>
+                    <p class="text-lg md:text-xl leading-relaxed text-gray-300 mt-4 font-body font-light">
+                        Mi experiencia laboral abarca tanto el sector público como el privado, incluyendo roles administrativos, técnicos y de obra.
+                        Me apasiona especialmente la bioarquitectura y todo lo relacionado con el diseño sostenible y amigable con el medio ambiente. Me interesa la integración del contexto local y la dinámica social en el proceso proyectual y disfruto explorando nuevas maneras de hacer arquitectura, repensando la espacialidad, los materiales y los modos de habitar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 px-4 bg-dark-card">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-display font-bold text-center mb-12">Portfolio</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Municipales -->
+                <div class="group">
+                    <a href="municipales.html" class="block">
+                        <div class="relative overflow-hidden rounded-lg bg-dark-bg">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Proyectos Municipales" 
+                                 class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/80 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <h3 class="text-2xl font-bold text-accent-green">Municipales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Proyectuales -->
+                <div class="group">
+                    <a href="proyectuales.html" class="block">
+                        <div class="relative overflow-hidden rounded-lg bg-dark-bg">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Proyectos Proyectuales" 
+                                 class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/80 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <h3 class="text-2xl font-bold text-accent-green">Proyectuales</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 3D -->
+                <div class="group">
+                    <a href="3d.html" class="block">
+                        <div class="relative overflow-hidden rounded-lg bg-dark-bg">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Proyectos 3D" 
+                                 class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/80 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4">
+                                <h3 class="text-2xl font-bold text-accent-green">3D</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl font-display font-bold text-center mb-12">Contacto</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Ubicación -->
+                <div class="bg-dark-card p-6 rounded-lg border border-gray-800 hover:border-accent-green transition-colors">
+                    <div class="text-center">
+                        <i class="fas fa-map-marker-alt text-3xl text-accent-green mb-4"></i>
+                        <h3 class="text-lg font-semibold mb-2">Ubicación</h3>
+                        <p class="text-gray-300">Gran Buenos Aires</p>
+                    </div>
+                </div>
+
+                <!-- Celular -->
+                <div class="bg-dark-card p-6 rounded-lg border border-gray-800 hover:border-accent-green transition-colors">
+                    <div class="text-center">
+                        <i class="fas fa-phone text-3xl text-accent-green mb-4"></i>
+                        <h3 class="text-lg font-semibold mb-2">Celular</h3>
+                        <a href="tel:+5493755531590" class="text-gray-300 hover:text-accent-green transition-colors">
+                            +54 9 3755 53-1590
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-dark-card p-6 rounded-lg border border-gray-800 hover:border-accent-green transition-colors">
+                    <div class="text-center">
+                        <i class="fas fa-envelope text-3xl text-accent-green mb-4"></i>
+                        <h3 class="text-lg font-semibold mb-2">Email</h3>
+                        <a href="mailto:romeroanabel.ra@hotmail.com" class="text-gray-300 hover:text-accent-green transition-colors">
+                            romeroanabel.ra@hotmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="bg-dark-card p-6 rounded-lg border border-gray-800 hover:border-accent-green transition-colors">
+                    <div class="text-center">
+                        <i class="fab fa-linkedin text-3xl text-accent-green mb-4"></i>
+                        <h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/anabelromero-ar/" target="_blank" class="text-gray-300 hover:text-accent-green transition-colors">
+                            anabelromero-ar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-card border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2024 Ani Romero. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Estilos CSS para animaciones -->
+    <style>
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes underline {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .animate-slide-in-left {
+            animation: slideInLeft 1s ease-out forwards;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+
+        .animate-underline {
+            animation: underline 1s ease-out 0.8s forwards;
+        }
+    </style>
+
+    <!-- JavaScript para el menú mobile -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        // Abrir menú
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+
+        // Cerrar menú
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Smooth scroll para los enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
