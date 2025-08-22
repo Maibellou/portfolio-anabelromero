@@ -7,7 +7,7 @@ Portfolio profesional de Ani Romero, estudiante avanzada de Arquitectura y Urban
 Este portfolio presenta una colección de trabajos arquitectónicos organizados en tres categorías principales:
 
 - **Proyectos Municipales**: Planos técnicos y proyectos para entidades municipales
-- **Proyectos Proyectuales**: Diseños conceptuales y proyectos arquitectónicos
+- **Proyectos Documentacion Tecnica**: Diseños conceptuales y proyectos arquitectónicos
 - **Proyectos 3D**: Modelado tridimensional y visualizaciones arquitectónicas
 
 ## 🎨 Características del Diseño
@@ -42,7 +42,7 @@ Este portfolio presenta una colección de trabajos arquitectónicos organizados 
 portfolio-anabelromero/
 ├── index.html          # Página principal
 ├── municipales.html    # Sección de proyectos municipales
-├── proyectuales.html   # Sección de proyectos proyectuales
+├── documentacionTecnica.html   # Sección de documentacion Tecnica
 ├── 3d.html            # Sección de proyectos 3D
 └── README.md          # Este archivo
 ```
